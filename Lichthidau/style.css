@@ -1,0 +1,114 @@
+/* Thiết lập chung cho body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #e6e6e6, #cccccc); /* Nền sáng */
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Khung chứa toàn bộ nội dung */
+.container {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Khung cho chữ "Lịch Thi Đấu Bóng Đá" */
+.title-box {
+    background-color: #ff4d4d; /* Màu đỏ cho khung */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-box h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Lịch thi đấu */
+.schedule {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Khung của mỗi trận đấu */
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin: 15px 0;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.match:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Thiết lập cho phần đội bóng */
+.team {
+    display: flex;
+    align-items: center;
+    color: #df3b3b;
+    font-weight: bold;
+}
+
+.team img {
+    height: 50px;
+    margin: 0 10px;
+}
+
+/* Thông tin thời gian và địa điểm */
+.info {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.info span {
+    display: block;
+}
+
+.info span:first-child {
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+.info span:last-child {
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+/* Nút quay về trang chủ */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background: #d40000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}

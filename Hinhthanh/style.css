@@ -1,0 +1,87 @@
+/* Cấu hình chung cho body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0); 
+    color: #333333;
+}
+
+/* Khung chứa toàn bộ nội dung */
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tiêu đề chính */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Phần nội dung lịch sử */
+.history {
+    margin-top: 20px;
+}
+
+/* Các phần nhỏ trong lịch sử */
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.section img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Nút quay về trang chủ */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-button:hover {
+    background: #d40000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}

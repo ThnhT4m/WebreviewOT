@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+  }
+/* Thanh điều hướng chính */
+header {
+    background-color: #d71921; /* Màu đỏ */
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Giãn cách logo và menu */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều ngang */
+    position: fixed; /* Cố định thanh ở đầu trang */
+    top: 0; /* Dán sát phần trên cùng */
+    left: 0;
+    z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+  }
+  
+  /* Đảm bảo nội dung thanh nằm ngang và giãn cách đều */
+  .nav-bar {
+    display: flex; /* Căn ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung */
+    width: 100%;
+  }
+  
+  /* Danh sách liên kết */
+  .nav-links {
+    display: flex; /* Nằm ngang */
+    list-style: none; /* Bỏ ký hiệu chấm */
+    gap: 2rem; /* Khoảng cách giữa các liên kết */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Các liên kết */
+  .nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+  }
+  
+  /* Gạch chân trắng khi hover */
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  /* Logo */
+  .logo {
+    height: 50px;
+    margin-right: 1rem;
+  }
+  
+  .video-container {
+   
+        margin: 0px auto; /* Canh giữa container */
+  
+  }
+  
+  .video-bg {
+    width: 100%; /* Đảm bảo video chiếm hết chiều rộng khung */
+    height: 100%; /* Đảm bảo video chiếm hết chiều cao khung */
+    object-fit:fill; /* Cắt phần thừa của video để giữ tỷ lệ */
+    z-index: -1; /* Đảm bảo video nằm dưới các phần tử khác */
+    filter: blur(2px);
+  }
+  
+  .intro-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    -webkit-text-stroke: 0.5px black; /* Viền đen với độ dày 2px */
+    z-index: 1; /* Đảm bảo tiêu đề nằm trên video */
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+  .section-title {
+    text-align: center;
+    font-size: 28px; /* Tăng kích thước font để nổi bật hơn */
+    color: #2C3E50; /* Màu xanh đậm sang trọng */
+    font-weight: 600; /* Làm tiêu đề đậm để rõ ràng hơn */
+    font-family: 'Arial', sans-serif; /* Chuyển sang phông chữ phổ biến */
+    margin-bottom: 20px; /* Thêm khoảng cách dưới tiêu đề */
+    text-transform: uppercase; /* Chuyển chữ in hoa để tạo sự nổi bật */
+}
+
+.content1 {
+    color: #333333; /* Màu xám đậm thay vì đen thuần */
+    margin-top: 30px;
+    font-size: 18px; /* Tăng kích thước chữ để dễ đọc hơn */
+    line-height: 1.8; /* Tăng khoảng cách dòng để nội dung thoáng hơn */
+    text-align: justify; /* Canh đều hai bên nội dung */
+    font-family: 'Roboto', sans-serif; /* Font hỗ trợ tiếng Việt */
+    padding: 20px; /* Thêm đệm đều xung quanh */
+    background-color: #F9F9F9; /* Thêm nền nhạt để phân biệt nội dung */
+    border-radius: 8px; /* Làm các góc mềm mại hơn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+/* Grid container */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 40px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+/* Individual cards */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card image */
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Card content */
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Link styling */
+.card-link {
+    font-size: 16px;
+    color: #d71920;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: #a50e12;
+}
+
+
+                                    /*Footer*/
+footer {
+    background-color: #333; /* Màu nền tối */
+    color: white; /* Màu chữ trắng */
+    padding: 1rem 2rem; /* Khoảng cách bên trong */
+    text-align: center; /* Căn giữa nội dung */
+    position: relative; /* Đảm bảo footer có thể di chuyển trong phần tử chứa */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng nhẹ */
+    width: 100%; /* Đảm bảo footer chiếm hết chiều ngang */
+    margin-top: auto; /* Đẩy footer xuống dưới cùng của trang */
+  }
+  
+  .footer-content {
+    display: flex; /* Sử dụng flexbox để sắp xếp nội dung */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    gap: 0.5rem; /* Khoảng cách giữa các phần tử */
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 1rem; /* Kích thước chữ cho dòng copyright */
+  }
+  
+  .footer-content .footer-link {
+    color: #ffc107; /* Màu vàng nổi bật cho liên kết */
+    text-decoration: none; /* Xóa gạch chân mặc định */
+    font-size: 1rem; /* Kích thước chữ liên kết */
+    font-weight: bold;
+    transition: color 0.3s; /* Hiệu ứng đổi màu khi hover */
+  }
+  
+  .footer-content .footer-link:hover {
+    color: white; /* Đổi sang màu trắng khi hover */
+  }
