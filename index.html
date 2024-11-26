@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Old Trafford Museum</title>
+  <link rel="icon" href="./images/logo.png" type="image/logo">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -25,14 +26,17 @@
     </nav>
   </header>
   <div>
-
-        <div class="video-container">
-            <h1 class="intro-title">Welcome to Old Trafford.</h1>
-            <video class="video-bg" autoplay muted loop>
-                <source src="./videos/vidbackg.mp4" type="video/mp4">
-            </video>
-        </div>
+  <!--Phần video đầu-->
+  <div class="video-container">
+    <video class="video-bg" autoplay muted loop>
+      <source src="./videos/vidbackg.mp4" type="video/mp4">
+      Trình duyệt của bạn không hỗ trợ video.
+    </video>
+    <h1 class="intro-title">Welcome to Old Trafford.</h1>
+    <!-- <script src="script.js"></script> -->
+    <button class="click" onclick="scrollToOverview()">Xem thêm</button>
   </div>
+                          
   
   <section id="about"> <!-- Phần "About" -->
     <div class="container"> <!-- Bố cục chứa nội dung -->
@@ -44,6 +48,40 @@
         </p>
     </div>
 </section>
+<div class="slider">
+  
+  <div class="list">
+      <div class="item">
+          <img src="images/san1.jpg" alt="">
+      </div>
+      <div class="item">
+          <img src="images/san2.jpg" alt="">
+      </div>
+      <div class="item">
+          <img src="images/san3.jpg" alt="">
+      </div>
+      <div class="item">
+          <img src="images/san4.jpg" alt="">
+      </div>
+      <div class="item">
+          <img src="images/san5.jpg" alt="">
+      </div>
+  </div>
+  <div class="buttons">
+      <button id="prev"><</button>
+      <button id="next">></button>
+  </div>
+  <ul class="dots">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+  </ul>
+  <script src="script.js"></script>
+</div>
+
+
 <!--Xây dựng các card thông tin-->
 <div class="card-grid">
     <!-- Card 1 -->
@@ -74,16 +112,56 @@
         </div>
     </div>
 </div>
-
+<script src="script.js"></script>
   
+</body>
+  
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo và tiêu đề -->
+        <div class="footer-logo">
+          <img src="./images/logo.png" alt="Logo Old Trafford">
+          <h3>OLD TRAFFORD MUSEUM</h3>
+          <p>Explore the Legacy of Football</p>
+        </div>
     
-  
-  <!-- Footer Section -->
-  <footer >
-    <div class="footer-content">
-      <p>&copy; Copyright by Luu Van Thai</p>
-      <a href="https://www.facebook.com/profile.php?id=100045922817424" class="footer-link">Liên hệ</a>
-    </div>
-  </footer>
+        <!-- Thông tin liên hệ -->
+        <div class="footer-info">
+          <div class="contact-item">
+            <strong>Số điện thoại liên hệ:</strong>
+            <p>+44 161 234 5678</p>
+          </div>
+          <div class="contact-item">
+            <strong>Email:</strong>
+            <p><a href="mailto:contact@oldtrafford.com">contact@oldtrafford.com</a></p>
+          </div>
+          <div class="contact-item">
+            <strong>Địa chỉ:</strong>
+            <p>Sir Matt Busby Way, Manchester M16 0RA, UK</p>
+          </div>
+        </div>
+    
+        <!-- Địa chỉ các cơ sở -->
+        <div class="footer-branches">
+          <strong>Các cơ sở:</strong>
+          <p>Cơ sở chính: Old Trafford, Manchester</p>
+          <p>Cơ sở phụ: London Training Center</p>
+          <p>Cơ sở khác: Liverpool Fan Zone</p>
+        </div>
+    
+        <!-- Liên kết mạng xã hội -->
+        <div class="footer-social">
+          <strong>Kết nối với chúng tôi:</strong>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="./images/Facebook_icon.svg.png" alt="Facebook"></a>
+            <a href="https://youtube.com" target="_blank"><img src="./images/YouTube.svg.png" alt="YouTube"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Copyright by Luu Van Thai</p>
+      </div>
+    </footer>
 </body>
 </html>
