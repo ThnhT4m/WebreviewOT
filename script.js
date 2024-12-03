@@ -1,6 +1,10 @@
 function scrollToOverview() {
   document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
 }
+setTimeout(() => {
+    document.querySelector('.intro-title').classList.add('done');
+    document.querySelector('.intro-title2').classList.add('done');
+  }, 4000);
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
@@ -55,3 +59,5 @@ dots.forEach((li, key) => {
 window.onresize = function () {
     reloadSlider();
 };
+
+  

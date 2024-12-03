@@ -72,31 +72,62 @@ header {
 }
 
 /* Tiêu đề trên video */
-.intro-title {
+.intro-title, .intro-title2 {
   position: absolute;
-  top: 50%;
   left: 50%;
-  width: 22ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
+  transform: translateX(-50%);
   color: white;
   -webkit-text-stroke: 0.5px black;
   z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
 }
-@keyframes typing {
-  from {
-      width: 0;
-  }
+
+.intro-title {
+  top: 40%; 
+  font-size: 4rem;
+  max-width: 80vw; 
+  animation: typing-main 4s steps(30, end), blink .75s step-end infinite;
 }
+
+.intro-title2 {
+  top: 55%;
+  font-size: 2rem;
+  max-width: 70vw; 
+  animation: typing-main2 4s steps(30, end), blink .75s step-end infinite;
+}
+
+@keyframes typing-main {
+  from { width: 0; }
+  to { width: 50%; } 
+}
+
+@keyframes typing-sub {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
 @keyframes blink {
-  50% {
-      border-color: transparent;
-  }
+  50% { border-color: transparent; }
 }
+.intro-title.done, .intro-title2.done {
+  border-right: none;
+}
+@keyframes typing-main2 {
+  from { width: 0; }
+  to { width: 25%; } 
+}
+
+@keyframes typing-sub2 {
+  from { width: 0; }
+  to { width: 50%; }
+}
+
+@keyframes blink2 {
+  50% { border-color: transparent; }
+}
+
 
 /* Nút nhấn trên video */
 .click {
